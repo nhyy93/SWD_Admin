@@ -10,20 +10,26 @@ import ContentModeration from "./pages/Admin/ContentModeration";
 import PlatformConfig from "./pages/Admin/PlatformConfig";
 import AnalyticsReporting from "./pages/Admin/AnalyticsReporting";
 import SupportFeedback from "./pages/Admin/SupportFeedback";
-
+import AdminLogin from "./pages/AdminLogin/AdminLogin";
+import ForgotPassword from './pages/AdminLogin/ForgotPassword';
+import VerifyCode from './pages/AdminLogin/VerifyCode';
 function App() {
   return (
     <Router>
       <Routes>
+
         {/* Admin routes */}
-        <Route path="/" element={<AdminLayout />}>
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="users" element={<UserManagement />} />
-          <Route path="matches" element={<MatchRideMonitoring />} />
-          <Route path="content" element={<ContentModeration />} />
-          <Route path="config" element={<PlatformConfig />} />
-          <Route path="analytics" element={<AnalyticsReporting />} />
-          <Route path="support" element={<SupportFeedback />} />
+        <Route path="/" element={<AdminLogin />} />
+        <Route path="forgot" element={<ForgotPassword />} />
+        <Route path="verify" element={<VerifyCode />} />
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="admin/dashboard" element={<Dashboard />} />
+          <Route path="admin/users" element={<UserManagement />} />
+          <Route path="admin/matches" element={<MatchRideMonitoring />} />
+          <Route path="admin/content" element={<ContentModeration />} />
+          <Route path="admin/config" element={<PlatformConfig />} />
+          <Route path="admin/analytics" element={<AnalyticsReporting />} />
+          <Route path="admin/support" element={<SupportFeedback />} />
         </Route>
       </Routes>
     </Router>
