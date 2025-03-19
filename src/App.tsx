@@ -16,7 +16,7 @@ function App() {
     <Router>
       <Routes>
         {/* Admin routes */}
-        <Route path="/admin" element={<AdminLayout />}>
+        <Route path="/" element={<AdminLayout />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="users" element={<UserManagement />} />
           <Route path="matches" element={<MatchRideMonitoring />} />
