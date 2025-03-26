@@ -26,10 +26,10 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="users" element={<UserManagement />} />
           <Route path="matches" element={<MatchRideMonitoring />} />
-          <Route path="admin/content" element={<ContentModeration />} />
-          <Route path="admin/config" element={<PlatformConfig />} />
+          {/* <Route path="admin/content" element={<ContentModeration />} />
+          <Route path="admin/config" element={<PlatformConfig />} /> */}
           <Route path="admin/analytics" element={<AnalyticsReporting />} />
-          <Route path="admin/support" element={<SupportFeedback />} />
+          {/* <Route path="admin/support" element={<SupportFeedback />} /> */}
         </Route>
       </Routes>
     </Router>
