@@ -23,9 +23,9 @@ function App() {
         <Route path="forgot" element={<ForgotPassword />} />
         <Route path="verify" element={<VerifyCode />} />
         <Route path="/admin" element={<AdminLayout />}>
-          <Route path="admin/dashboard" element={<Dashboard />} />
-          <Route path="admin/users" element={<UserManagement />} />
-          <Route path="admin/matches" element={<MatchRideMonitoring />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="users" element={<UserManagement />} />
+          <Route path="matches" element={<MatchRideMonitoring />} />
           <Route path="admin/content" element={<ContentModeration />} />
           <Route path="admin/config" element={<PlatformConfig />} />
           <Route path="admin/analytics" element={<AnalyticsReporting />} />
