@@ -1,14 +1,21 @@
 .admin-container {
-    display: flex;
-    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
     padding: 20px;
-    margin-left: 0;
-    background: #f4f6f9;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    transition: margin-left 0.3s ease-in-out;
-    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
+h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #7f8c8d;
 }
 
 .content-wrapper {
@@ -68,42 +75,41 @@
     background: #f1f1f1;
 }
 
-/* ================ */
-/* ACTION BUTTON STYLES */
-/* ================ */
+
 .action-button {
     border: none;
-    padding: 8px;
-    border-radius: 5px;
-    margin: 2px;
+    padding: 6px;
     cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: 0.3s ease;
 }
 
-.action-button.view {
+.view {
     background: #3498db;
     color: white;
 }
 
-.action-button.verify {
-    background: #2ecc71;
-    color: white;
+.view:hover {
+    background: #2980b9;
 }
 
-.action-button.suspend {
+.suspend {
     background: #e74c3c;
     color: white;
 }
 
-.action-button:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
+.suspend:hover {
+    background: #c0392b;
 }
 
-/* ================ */
-/* VERIFIED & NOT VERIFIED ICONS */
-/* ================ */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 .verified-icon {
     color: #2ecc71;
     font-size: 18px;
@@ -135,9 +141,6 @@
     }
 }
 
-/* ================ */
-/* SEARCH & FILTER STYLES */
-/* ================ */
 .admin-controls {
     display: flex;
     justify-content: space-between;
@@ -146,39 +149,33 @@
 }
 
 .search-box {
-    position: relative;
     display: flex;
     align-items: center;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    background: #ecf0f1;
+    padding: 8px;
+    border-radius: 5px;
     width: 250px;
 }
 
 .search-box input {
     border: none;
+    background: transparent;
     outline: none;
-    padding: 8px;
+    margin-left: 5px;
     width: 100%;
-    font-size: 14px;
 }
 
 .search-icon {
-    color: #2c3e50;
-    margin-right: 10px;
+    color: #3498db;
 }
 
-/* Role Filter Dropdown */
 .role-filter {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
     cursor: pointer;
 }
 
-/* No Results */
 .no-results {
     text-align: center;
     font-size: 16px;
@@ -186,9 +183,7 @@
     font-weight: bold;
 }
 
-/* ================ */
-/* ACTION BUTTON STYLES */
-/* ================ */
+
 .action-button {
     border: none;
     padding: 8px;
@@ -219,9 +214,7 @@
     opacity: 0.8;
 }
 
-/* ================ */
-/* VERIFIED & NOT VERIFIED ICONS */
-/* ================ */
+
 .verified-icon {
     color: #2ecc71;
     font-size: 18px;
@@ -232,9 +225,7 @@
     font-size: 18px;
 }
 
-/* ================ */
-/* RESPONSIVE DESIGN */
-/* ================ */
+
 @media (max-width: 768px) {
     .admin-controls {
         flex-direction: column;
@@ -250,16 +241,12 @@
     }
 }
 
-/* ================ */
-/* ADMIN SECTIONS */
-/* ================ */
+
 .admin-section {
     margin-top: 30px;
 }
 
-/* ================ */
-/* STATUS COLORS */
-/* ================ */
+
 .status-active {
     color: #2ecc71;
     font-weight: bold;
@@ -649,34 +636,47 @@
     font-weight: bold;
 }
 
-/* ================ */
-/* TABLE STYLES */
-/* ================ */
-.admin-table table {
+.admin-table {
     width: 100%;
-    border-collapse: collapse;
-    background: white;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
 }
 
-.admin-table th,
-.admin-table td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
     text-align: left;
 }
 
-/* ================ */
-/* BUTTON STYLES */
-/* ================ */
+th {
+    background: #2c3e50;
+    color: white;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f5f5f5;
+}
+
 .action-button {
     border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
+    padding: 6px;
     cursor: pointer;
+    border-radius: 5px;
     font-size: 14px;
-    transition: 0.3s;
+    margin-right: 5px;
+    transition: 0.3s ease;
 }
+
 
 .action-button.toggle:hover {
     transform: scale(1.1);
