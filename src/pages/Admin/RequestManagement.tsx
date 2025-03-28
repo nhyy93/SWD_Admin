@@ -46,7 +46,7 @@ const RequestManagement: React.FC = () => {
         return;
       }
 
-      await axios.put(`http://localhost:8080/api/admin/shops/request/${id}/approve`, {}, {
+      await axios.post(`http://localhost:8080/api/admin/shops/request/${id}/approve`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -67,7 +67,7 @@ const RequestManagement: React.FC = () => {
         return;
       }
 
-      await axios.put(`http://localhost:8080/api/admin/shops/request/${id}/reject`, {}, {
+      await axios.post(`http://localhost:8080/api/admin/shops/request/${id}/reject`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
