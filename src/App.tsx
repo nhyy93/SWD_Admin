@@ -13,6 +13,7 @@ import SupportFeedback from "./pages/Admin/SupportFeedback";
 import AdminLogin from "./pages/AdminLogin/AdminLogin";
 import ForgotPassword from './pages/AdminLogin/ForgotPassword';
 import VerifyCode from './pages/AdminLogin/VerifyCode';
+import RequestManagement from "./pages/Admin/RequestManagement";
 function App() {
   return (
     <Router>
@@ -29,6 +30,7 @@ function App() {
           {/* <Route path="admin/content" element={<ContentModeration />} />
           <Route path="admin/config" element={<PlatformConfig />} /> */}
           <Route path="analytics" element={<AnalyticsReporting />} />
+          <Route path="requests" element={<RequestManagement />} />
           {/* <Route path="admin/support" element={<SupportFeedback />} /> */}
         </Route>
       </Routes>
